@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://habitdesign.site/sitemap.xml
