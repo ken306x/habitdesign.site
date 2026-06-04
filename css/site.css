@@ -630,3 +630,15 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 .method-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;
   background:color-mix(in oklab,var(--accent) 13%,transparent);color:var(--accent);margin-bottom:.9rem}
 .method-ic svg{width:23px;height:23px}
+
+/* cross-page "explore more" cards + multi-link more row */
+.sci-more-row{display:flex;flex-wrap:wrap;gap:1.4rem}
+.res-next{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:680px){.res-next{grid-template-columns:1fr}}
+.res-next-card{display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;
+  background:var(--surface);border-radius:16px;padding:1.3rem 1.5rem;box-shadow:inset 0 0 0 1px var(--hair);
+  transition:transform .2s,box-shadow .2s}
+.res-next-card:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px var(--accent)}
+.res-next-card h3{font-size:1.05rem;margin-bottom:.25rem;color:var(--text)}
+.res-next-card p{font-size:.86rem;color:var(--muted);line-height:1.6}
+.res-next-go{color:var(--accent);font-size:1.2rem;flex:none}
