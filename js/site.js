@@ -22,6 +22,7 @@
       else el.textContent = val;
     }
     try { localStorage.setItem("hdl-lang", lang); } catch (e) {}
+    if (window.__renderDaily) window.__renderDaily(lang);
   }
   var saved = "ja";
   try { saved = localStorage.getItem("hdl-lang") || "ja"; } catch (e) {}
@@ -62,6 +63,40 @@
     if (dcClose) dcClose.addEventListener("click", closeDomainCard);
     dcBg.addEventListener("click", closeDomainCard);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDomainCard(); });
+  }
+
+  /* ── "今日の習慣" band: year grid + countdown + daily quote/plus-10 ── */
+  var yearGrid = document.getElementById("yearGrid");
+  if (yearGrid && window.DAILY) {
+    var now = new Date(), year = now.getFullYear();
+    var start = new Date(year, 0, 1), next = new Date(year + 1, 0, 1);
+    var DAY = 86400000;
+    var doy = Math.floor((now - start) / DAY);            // 0-based day of year
+    var total = Math.round((next - start) / DAY);          // 365 or 366
+    var remain = total - (doy + 1), pct = Math.round((doy + 1) / total * 100);
+    var frag = document.createDocumentFragment();
+    for (var d = 0; d < total; d++) {
+      var cell = document.createElement("span");
+      if (d < doy) cell.className = "yc on";
+      else if (d === doy) cell.className = "yc on today";
+      else cell.className = "yc";
+      frag.appendChild(cell);
+    }
+    yearGrid.appendChild(frag);
+    var q = window.DAILY.quotes[doy % window.DAILY.quotes.length];
+    var p = window.DAILY.plus10[doy % window.DAILY.plus10.length];
+    window.__renderDaily = function (lang) {
+      var en = lang === "en";
+      var cd = document.getElementById("yearCountdown");
+      if (cd) cd.textContent = en
+        ? (year + " — " + remain + " days left (" + pct + "% done)")
+        : (year + "年 — のこり " + remain + " 日（" + pct + "% が経過）");
+      var dq = document.getElementById("dailyQuote"), ds = document.getElementById("dailyQuoteSrc"), dp = document.getElementById("dailyPlus10");
+      if (dq) dq.textContent = "“" + (q[lang] || q.ja) + "”";
+      if (ds) ds.textContent = q.src ? "— " + q.src : "";
+      if (dp) dp.textContent = p[lang] || p.ja;
+    };
+    window.__renderDaily(document.documentElement.lang === "en" ? "en" : "ja");
   }
 
   /* ── back to top ─────────────────────────────────────────────────── */
