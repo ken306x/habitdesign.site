@@ -535,3 +535,13 @@ html:not(.js) .reveal{opacity:1!important;transform:none!important}
 .students-note,.faq-q span,.faq-a,.pub-title,.news-body p{
   word-break:keep-all;overflow-wrap:normal;
 }
+
+/* ── hub (portal) specifics ─────────────────────────────────────────── */
+.nav-portal{color:var(--accent)}
+.nav-portal:hover{color:var(--accent-strong)}
+.more-link-muted{color:var(--muted);font-family:var(--font-mono);font-size:.86rem;letter-spacing:.03em;cursor:default}
+.hub-join-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media (max-width:760px){.hub-join-grid{grid-template-columns:1fr}}
+.hub-join-grid .join-card{background:var(--surface);box-shadow:inset 0 0 0 1px var(--hair)}
+/* hub activity cards: project title in JA should use the body font stack */
+#activities .project h3{font-family:var(--font-jp),var(--font-latin),sans-serif;font-size:1.3rem}
