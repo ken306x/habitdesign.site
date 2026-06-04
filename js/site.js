@@ -40,37 +40,29 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  /* ── domain card ─────────────────────────────────────────────────── */
-  var DOMAIN_DATA = {
-    t45: { issue: '「やる気はあるのに、気づけば1週間サボっている。」', approach: '→ 行動センシングとリマインド設計で、無意識に「続く仕掛け」をつくる研究をしています。' },
-    t46: { issue: '「健診でひっかかっても、3か月後には元通り。」', approach: '→ ICTを使った小さな行動変容のきっかけ設計で、継続的な健康行動を支援します。' },
-    t47: { issue: '「動画教材を積んでいるが、一度も開いていない。」', approach: '→ 学習ログの分析と習慣化アプリで、「学び続けられる人」を支える仕組みを研究しています。' },
-    t48: { issue: '「気づいたら2時間たっていた…」', approach: '→ スマホ利用パターンの可視化とデジタルウェルビーイング設計で、意図した使い方を支援します。' },
-    t49: { issue: '「食事記録を3日続けたことがない。」', approach: '→ 記録の摩擦を減らすUIデザインで、無理なく続く食習慣づくりを探っています。' },
-    t50: { issue: '「タスク管理アプリが増えるのに、仕事は減らない。」', approach: '→ 行動パターンのデータ化で、個人に合った生産性向上の方法を研究しています。' },
-    t51: { issue: '「エコに関心はあるけど、日々の行動に落とし込めない。」', approach: '→ IoTセンシングと小さな目標設定で、省エネ行動の習慣化を支援します。' },
-    t52: { issue: '「町内会に入っているが、活動にはなかなか参加できていない。」', approach: '→ デジタルとリアルをつなぐ地域コミュニケーション設計を研究しています。' }
-  };
+  /* ── domain capsule popover (content comes from data-* attributes) ── */
   var dcBg = document.getElementById("domainCardBg");
   var dc = document.getElementById("domainCard");
   var dcTitle = document.getElementById("domainCardTitle");
   var dcIssue = document.getElementById("domainCardIssue");
   var dcApproach = document.getElementById("domainCardApproach");
   var dcClose = document.getElementById("domainCardClose");
-  function openDomainCard(key, label) {
-    var d = DOMAIN_DATA[key]; if (!d || !dc) return;
-    dcTitle.textContent = label;
-    dcIssue.textContent = d.issue;
-    dcApproach.textContent = d.approach;
-    dc.classList.add("visible"); dcBg.classList.add("visible");
-  }
   function closeDomainCard() { if (dc) { dc.classList.remove("visible"); dcBg.classList.remove("visible"); } }
-  document.querySelectorAll(".domain[data-i18n]").forEach(function (el) {
-    el.addEventListener("click", function () { openDomainCard(el.getAttribute("data-i18n"), el.textContent.trim()); });
-  });
-  if (dcClose) dcClose.addEventListener("click", closeDomainCard);
-  if (dcBg) dcBg.addEventListener("click", closeDomainCard);
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDomainCard(); });
+  if (dc && dcBg) {
+    document.querySelectorAll(".domain").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var issue = el.getAttribute("data-issue"), approach = el.getAttribute("data-approach");
+        if (!issue && !approach) return;
+        dcTitle.textContent = el.textContent.trim();
+        dcIssue.textContent = issue || "";
+        dcApproach.textContent = approach || "";
+        dc.classList.add("visible"); dcBg.classList.add("visible");
+      });
+    });
+    if (dcClose) dcClose.addEventListener("click", closeDomainCard);
+    dcBg.addEventListener("click", closeDomainCard);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDomainCard(); });
+  }
 
   /* ── back to top ─────────────────────────────────────────────────── */
   var btt = document.getElementById("backToTop");
