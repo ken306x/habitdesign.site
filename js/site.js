@@ -23,6 +23,7 @@
     }
     try { localStorage.setItem("hdl-lang", lang); } catch (e) {}
     if (window.__renderDaily) window.__renderDaily(lang);
+    if (window.__renderMyp) window.__renderMyp(lang);
   }
   var saved = "ja";
   try { saved = localStorage.getItem("hdl-lang") || "ja"; } catch (e) {}
@@ -99,13 +100,139 @@
     window.__renderDaily(document.documentElement.lang === "en" ? "en" : "ja");
   }
 
-  /* ── #マイプラス10: today's walking tip (date-rotating) ──────────────── */
+  /* ── #マイプラス10: walking tip (date-rotating + "next" omikuji) ──────── */
   var walkTip = document.getElementById("walkTip");
   if (walkTip && window.DAILY && window.DAILY.walkTips && window.DAILY.walkTips.length) {
+    var tips = window.DAILY.walkTips;
     var wnow = new Date();
     var wstart = new Date(wnow.getFullYear(), 0, 1);
-    var wdoy = Math.floor((wnow - wstart) / 86400000);
-    walkTip.textContent = window.DAILY.walkTips[wdoy % window.DAILY.walkTips.length];
+    var tipIx = Math.floor((wnow - wstart) / 86400000) % tips.length;
+    var showTip = function () { walkTip.textContent = tips[tipIx % tips.length]; };
+    showTip();
+    var tipNext = document.getElementById("walkTipNext");
+    if (tipNext) tipNext.addEventListener("click", function () {
+      tipIx = (tipIx + 1) % tips.length;
+      walkTip.classList.remove("tip-flip");
+      void walkTip.offsetWidth;
+      walkTip.classList.add("tip-flip");
+      showTip();
+    });
+  }
+
+  /* ── #マイプラス10: "今日の＋10" streak tracker (localStorage, on-device) ── */
+  var trkBtn = document.getElementById("trkBtn");
+  var trkWeek = document.getElementById("trkWeek");
+  var trkStreak = document.getElementById("trkStreak");
+  if (trkBtn && trkWeek && trkStreak) {
+    var KEY = "hdl-plus10";
+    var dayKey = function (d) {
+      return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+    };
+    var loadDone = function () {
+      try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; }
+    };
+    var saveDone = function (a) { try { localStorage.setItem(KEY, JSON.stringify(a)); } catch (e) {} };
+    // last 7 days, oldest → newest (today rightmost)
+    var weekDays = function () {
+      var out = [], base = new Date(); base.setHours(0, 0, 0, 0);
+      for (var i = 6; i >= 0; i--) { var d = new Date(base); d.setDate(base.getDate() - i); out.push(d); }
+      return out;
+    };
+    // current consecutive streak ending today (or yesterday if today not yet done)
+    var streakCount = function (done) {
+      var set = {}; for (var i = 0; i < done.length; i++) set[done[i]] = 1;
+      var d = new Date(); d.setHours(0, 0, 0, 0);
+      if (!set[dayKey(d)]) d.setDate(d.getDate() - 1); // allow streak to count up to yesterday
+      var n = 0;
+      while (set[dayKey(d)]) { n++; d.setDate(d.getDate() - 1); }
+      return n;
+    };
+    var dots = trkWeek.querySelectorAll(".trk-dot");
+    var dayEls = trkWeek.querySelectorAll(".trk-day");
+    var days = weekDays();
+    var WD_JA = ["日", "月", "火", "水", "木", "金", "土"];
+    var WD_EN = ["S", "M", "T", "W", "T", "F", "S"];
+    var render = function () {
+      var done = loadDone();
+      var set = {}; for (var i = 0; i < done.length; i++) set[done[i]] = 1;
+      var todayDone = !!set[dayKey(new Date())];
+      var enLbl = document.documentElement.lang === "en";
+      for (var j = 0; j < dots.length; j++) {
+        var on = !!set[dayKey(days[j])];
+        dots[j].classList.toggle("on", on);
+        dots[j].classList.toggle("is-today", j === dots.length - 1);
+        if (dayEls[j]) dayEls[j].textContent = (enLbl ? WD_EN : WD_JA)[days[j].getDay()];
+      }
+      var n = streakCount(done);
+      var en = document.documentElement.lang === "en";
+      if (n > 0) {
+        trkStreak.textContent = en ? ("Streak: " + n + (n === 1 ? " day" : " days") + " — keep it up!")
+          : ("連続 " + n + " 日 — その調子！");
+      } else {
+        trkStreak.textContent = en ? "Tap below to start your streak." : "下のボタンで連続記録をスタート。";
+      }
+      trkBtn.classList.toggle("is-done", todayDone);
+      trkBtn.textContent = todayDone
+        ? trkBtn.getAttribute(en ? "data-en-done" : "data-ja-done")
+        : trkBtn.getAttribute(en ? "data-en-do" : "data-ja-do");
+    };
+    trkBtn.addEventListener("click", function () {
+      var done = loadDone(), k = dayKey(new Date()), i = done.indexOf(k);
+      if (i === -1) { done.push(k); } else { done.splice(i, 1); } // tap again to undo
+      saveDone(done);
+      render();
+    });
+    render();
+    window.__renderMyp = render; // re-render labels on language switch
+  }
+
+  /* ── #マイプラス10: IF-THEN plan builder ─────────────────────────────── */
+  var bldCue = document.getElementById("bldCue");
+  var bldAct = document.getElementById("bldAct");
+  var bldOut = document.getElementById("bldOut");
+  if (bldCue && bldAct && bldOut) {
+    var bldConj = document.querySelector(".bld-conj");
+    var bldCopy = document.getElementById("bldCopy");
+    var optText = function (sel) {
+      var o = sel.options[sel.selectedIndex];
+      var en = document.documentElement.lang === "en";
+      return o.getAttribute(en ? "data-en" : "data-ja") || o.textContent;
+    };
+    var planText = function () {
+      var en = document.documentElement.lang === "en";
+      var c = optText(bldCue), a = optText(bldAct);
+      return en ? (c + ", " + a + ".") : ("「" + c + "、" + a + "」");
+    };
+    var renderPlan = function () {
+      if (bldConj) bldConj.textContent = bldConj.getAttribute(document.documentElement.lang === "en" ? "data-en" : "data-ja");
+      bldOut.textContent = planText();
+    };
+    bldCue.addEventListener("change", renderPlan);
+    bldAct.addEventListener("change", renderPlan);
+    if (bldCopy) bldCopy.addEventListener("click", function () {
+      var txt = planText(), en = document.documentElement.lang === "en";
+      var done = function () {
+        bldCopy.classList.add("is-copied");
+        bldCopy.textContent = bldCopy.getAttribute(en ? "data-en-done" : "data-ja-done");
+        setTimeout(function () {
+          bldCopy.classList.remove("is-copied");
+          bldCopy.textContent = bldCopy.getAttribute(en ? "data-en" : "data-ja");
+        }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(txt).then(done, done);
+      } else {
+        try {
+          var ta = document.createElement("textarea");
+          ta.value = txt; document.body.appendChild(ta); ta.select();
+          document.execCommand("copy"); document.body.removeChild(ta); done();
+        } catch (e) {}
+      }
+    });
+    renderPlan();
+    // chain into language switch alongside the tracker
+    var prevMyp = window.__renderMyp;
+    window.__renderMyp = function (lang) { if (prevMyp) prevMyp(lang); renderPlan(); };
   }
 
   /* ── back to top ─────────────────────────────────────────────────── */

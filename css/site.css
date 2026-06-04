@@ -709,3 +709,57 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 
 /* fun-card icon alignment (uses .method-ic badge) */
 .fun-card .method-ic{margin-bottom:.7rem}
+
+/* ── #マイプラス10: photo hero ─────────────────────────────────────── */
+.myp-hero{position:relative;display:flex;align-items:flex-end;min-height:clamp(440px,72vh,640px);
+  background-image:var(--myp-img);background-size:cover;background-position:center 38%;overflow:hidden}
+.myp-hero-scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(8,9,12,.92) 4%,rgba(8,9,12,.5) 40%,rgba(8,9,12,.22) 72%,rgba(8,9,12,.45) 100%)}
+.myp-hero-inner{position:relative;z-index:2;padding-block:clamp(2rem,5vh,3.4rem) clamp(2.6rem,7vh,4rem)}
+.crumb-light{color:rgba(243,242,238,.78)}
+.crumb-light:hover{color:var(--accent)}
+.myp-hero .sec-kicker{color:rgba(243,242,238,.7)}
+.myp-hero .sec-num{color:var(--accent)}
+.myp-hero-h{color:#f3f2ee;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;letter-spacing:-.01em;font-weight:800;margin:.2rem 0 .9rem}
+.myp-hero-lead{color:rgba(243,242,238,.84);font-size:clamp(1rem,1.6vw,1.18rem);line-height:1.8;max-width:42ch;margin-bottom:1.6rem}
+@media (prefers-reduced-motion:no-preference){.myp-hero{animation:kb 12s ease-out both}}
+
+/* today's tip "omikuji" next button + flip */
+.tip-next{margin-top:1rem;background:none;border:0;cursor:pointer;font-family:var(--font-mono);
+  font-size:.78rem;letter-spacing:.04em;color:var(--accent);padding:.2rem 0}
+.tip-next:hover{color:var(--accent-strong)}
+.walk-tip-text.tip-flip{animation:tipflip .42s ease}
+@keyframes tipflip{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ── #マイプラス10: streak tracker ─────────────────────────────────── */
+.trk-card{margin-top:1.6rem;background:var(--surface);border-radius:20px;
+  padding:clamp(1.6rem,3vw,2.4rem);box-shadow:inset 0 0 0 1px var(--hair);text-align:center}
+.trk-week{display:flex;justify-content:center;gap:clamp(.5rem,2vw,1rem);margin-bottom:1.4rem}
+.trk-cell{display:flex;flex-direction:column;align-items:center;gap:.45rem}
+.trk-dot{width:clamp(30px,6vw,42px);height:clamp(30px,6vw,42px);border-radius:11px;
+  background:var(--cell-off);transition:background .3s ease,transform .3s ease}
+.trk-dot.on{background:var(--accent)}
+.trk-dot.is-today{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--accent)}
+.trk-dot.is-today.on{transform:scale(1.06)}
+.trk-day{font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
+.trk-streak{font-size:1.05rem;font-weight:700;min-height:1.6em;margin-bottom:1.1rem}
+.trk-btn{font-size:1rem}
+.trk-btn.is-done{background:var(--surface-2);color:var(--muted);box-shadow:inset 0 0 0 1px var(--border)}
+.trk-note{margin-top:1rem;font-size:.74rem;color:var(--muted);font-family:var(--font-mono);letter-spacing:.02em}
+
+/* ── #マイプラス10: IF-THEN plan builder ───────────────────────────── */
+.bld-card{background:var(--surface);border-radius:20px;padding:clamp(1.4rem,3vw,2.2rem);
+  box-shadow:inset 0 0 0 1px var(--hair);margin-top:1.2rem}
+.bld-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1rem}
+.bld-field{flex:1 1 220px;display:flex;flex-direction:column;gap:.4rem}
+.bld-tag{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.04em;color:var(--muted)}
+.bld-select{font-family:inherit;font-size:1rem;padding:.7rem .9rem;border-radius:11px;
+  border:1px solid var(--border);background:var(--bg);color:var(--text);cursor:pointer}
+.bld-select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.bld-conj{flex:none;align-self:center;padding-bottom:.7rem;font-family:var(--font-mono);
+  font-size:.82rem;color:var(--accent)}
+.bld-out{margin-top:1.4rem;font-size:clamp(1.1rem,2.4vw,1.4rem);font-weight:700;line-height:1.6;
+  padding:1.1rem 1.2rem;border-radius:14px;background:var(--faint);border-left:3px solid var(--accent)}
+.bld-copy{margin-top:1rem;font-size:.86rem}
+.bld-copy.is-copied{color:var(--accent);border-color:var(--accent)}
+@media (max-width:560px){.bld-conj{display:none}.bld-field{flex:1 1 100%}}
