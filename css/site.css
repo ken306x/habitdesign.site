@@ -569,3 +569,19 @@ html:not(.js) .reveal{opacity:1!important;transform:none!important}
 .sci-tag{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.02em;color:var(--muted);
   background:color-mix(in oklab,var(--accent) 8%,transparent);padding:.34em .7em;border-radius:999px;
   box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap}
+
+/* hub science teaser: theme chips (clickable) */
+.theme-chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.4rem}
+.theme-chip{display:inline-flex;align-items:center;gap:.6em;text-decoration:none;
+  background:var(--surface);color:var(--text);padding:.7em 1.1em;border-radius:999px;
+  box-shadow:inset 0 0 0 1px var(--border);font-size:.95rem;transition:transform .2s,box-shadow .2s,background-color .2s}
+.theme-chip:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px var(--accent)}
+.theme-chip-n{font-family:var(--font-mono);font-size:.74rem;color:var(--accent);letter-spacing:.06em}
+/* stronger, clearly-visible keyword chips (science detail page) */
+.sci-tag{background:var(--surface);box-shadow:inset 0 0 0 1px var(--border);color:var(--text)}
+/* science detail page blocks */
+.sci-detail-list{display:flex;flex-direction:column;gap:2.6rem}
+.sci-detail{scroll-margin-top:90px}
+.sci-detail-head{display:flex;align-items:baseline;gap:.9em;margin-bottom:.9rem}
+.sci-detail-head h2{font-size:clamp(1.3rem,2.4vw,1.7rem)}
+.sci-detail p{color:var(--muted);line-height:1.9;font-size:1rem;max-width:68ch}
