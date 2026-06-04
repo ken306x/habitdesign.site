@@ -40,6 +40,13 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  /* ── back to top ─────────────────────────────────────────────────── */
+  var btt = document.getElementById("backToTop");
+  if (btt) {
+    window.addEventListener("scroll", function () { btt.classList.toggle("visible", window.scrollY > 300); }, { passive: true });
+    btt.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: REDUCE ? "auto" : "smooth" }); });
+  }
+
   /* ── mobile hamburger menu ───────────────────────────────────────── */
   var burger = document.getElementById("navBurger");
   var navLinks = document.getElementById("navLinks");
