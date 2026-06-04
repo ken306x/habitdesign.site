@@ -258,8 +258,18 @@ html.noanim .ladder .cell.top{background:var(--accent)}
 /* domains */
 .domains{display:flex;flex-wrap:wrap;gap:.6rem}
 .domain{font-size:.92rem;padding:.6em 1.05em;border-radius:999px;background:var(--surface);
-  box-shadow:inset 0 0 0 1px var(--hair);color:var(--text);transition:transform .2s,box-shadow .2s}
+  box-shadow:inset 0 0 0 1px var(--hair);color:var(--text);transition:transform .2s,box-shadow .2s;cursor:pointer;user-select:none}
 .domain:hover{box-shadow:inset 0 0 0 1px var(--accent);transform:translateY(-2px)}
+/* domain card */
+.domain-card-bg{position:fixed;inset:0;background:rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .25s;z-index:1000}
+.domain-card-bg.visible{opacity:1;pointer-events:auto}
+.domain-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.96);opacity:0;pointer-events:none;background:var(--surface);border-radius:20px;padding:2rem 2.2rem 1.8rem;width:min(92vw,460px);box-shadow:0 8px 48px rgba(0,0,0,.18);z-index:1001;transition:opacity .22s,transform .22s}
+.domain-card.visible{opacity:1;transform:translate(-50%,-50%) scale(1);pointer-events:auto}
+.domain-card-close{position:absolute;top:.75rem;right:1rem;background:none;border:none;font-size:1.3rem;line-height:1;cursor:pointer;color:var(--muted);padding:.2rem .4rem;border-radius:6px;transition:color .15s}
+.domain-card-close:hover{color:var(--text)}
+.domain-card-title{font-size:1.05rem;font-weight:700;margin-bottom:1rem;color:var(--text)}
+.domain-card-issue{font-size:.97rem;line-height:1.75;color:var(--text);border-left:3px solid var(--accent);background:color-mix(in oklab,var(--accent) 9%,transparent);padding:.75rem 1rem;border-radius:0 10px 10px 0;margin-bottom:1rem}
+.domain-card-approach{font-size:.86rem;line-height:1.8;color:var(--muted)}
 /* projects */
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 @media (max-width:780px){.projects{grid-template-columns:1fr}}
