@@ -554,3 +554,8 @@ html:not(.js) .reveal{opacity:1!important;transform:none!important}
 .sci-n{font-family:var(--font-mono);font-size:.78rem;color:var(--accent);letter-spacing:.1em}
 .sci-card h3{font-size:1.12rem;margin:.6rem 0 .5rem;line-height:1.4}
 .sci-card p{font-size:.9rem;color:var(--muted);line-height:1.75}
+
+/* ── ghost button on dark editorial hero (was nearly invisible) ──────── */
+.hero-editorial .btn-ghost{color:#f5f3ee;background:rgba(255,255,255,.06);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.55);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.hero-editorial .btn-ghost:hover{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px #fff}
