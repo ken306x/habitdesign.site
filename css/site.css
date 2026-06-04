@@ -545,3 +545,12 @@ html:not(.js) .reveal{opacity:1!important;transform:none!important}
 .hub-join-grid .join-card{background:var(--surface);box-shadow:inset 0 0 0 1px var(--hair)}
 /* hub activity cards: project title in JA should use the body font stack */
 #activities .project h3{font-family:var(--font-jp),var(--font-latin),sans-serif;font-size:1.3rem}
+
+/* ── hub: science & technology grid ─────────────────────────────────── */
+.sci-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media (max-width:900px){.sci-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.sci-grid{grid-template-columns:1fr}}
+.sci-card{background:var(--surface);border-radius:16px;padding:1.5rem 1.5rem 1.6rem;box-shadow:inset 0 0 0 1px var(--hair)}
+.sci-n{font-family:var(--font-mono);font-size:.78rem;color:var(--accent);letter-spacing:.1em}
+.sci-card h3{font-size:1.12rem;margin:.6rem 0 .5rem;line-height:1.4}
+.sci-card p{font-size:.9rem;color:var(--muted);line-height:1.75}
