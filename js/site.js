@@ -99,6 +99,15 @@
     window.__renderDaily(document.documentElement.lang === "en" ? "en" : "ja");
   }
 
+  /* ── #マイプラス10: today's walking tip (date-rotating) ──────────────── */
+  var walkTip = document.getElementById("walkTip");
+  if (walkTip && window.DAILY && window.DAILY.walkTips && window.DAILY.walkTips.length) {
+    var wnow = new Date();
+    var wstart = new Date(wnow.getFullYear(), 0, 1);
+    var wdoy = Math.floor((wnow - wstart) / 86400000);
+    walkTip.textContent = window.DAILY.walkTips[wdoy % window.DAILY.walkTips.length];
+  }
+
   /* ── back to top ─────────────────────────────────────────────────── */
   var btt = document.getElementById("backToTop");
   if (btt) {
