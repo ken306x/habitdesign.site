@@ -678,3 +678,12 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 .daily-plus10{border-top:1px solid var(--hair);padding-top:1rem}
 .dp-label{display:inline-block;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
 .daily-plus10 p{font-size:1.02rem;line-height:1.6}
+
+/* app usage 5 steps as small cards with descriptions */
+.step-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:.9rem}
+@media (max-width:900px){.step-cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.step-cards{grid-template-columns:1fr}}
+.step-card{background:var(--surface);border-radius:14px;padding:1.1rem 1.2rem;box-shadow:inset 0 0 0 1px var(--hair)}
+.step-card .step-n{display:grid;place-items:center;width:1.7em;height:1.7em;border-radius:50%;background:var(--accent);color:var(--on-accent);font-family:var(--font-mono);font-size:.74rem;font-weight:700;margin-bottom:.6rem}
+.step-card h4{font-size:.96rem;margin-bottom:.35rem}
+.step-card p{font-size:.82rem;color:var(--muted);line-height:1.6}
