@@ -563,3 +563,9 @@ html:not(.js) .reveal{opacity:1!important;transform:none!important}
 /* domain capsule is a <button>; reset native button styling and signal clickability */
 .domain{border:none;font-family:inherit;cursor:pointer;line-height:1.2;-webkit-appearance:none;appearance:none}
 .domain:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* science card keyword chips */
+.sci-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.sci-tag{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.02em;color:var(--muted);
+  background:color-mix(in oklab,var(--accent) 8%,transparent);padding:.34em .7em;border-radius:999px;
+  box-shadow:inset 0 0 0 1px var(--hair);white-space:nowrap}
