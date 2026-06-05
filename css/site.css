@@ -544,6 +544,11 @@ html:not(.js) .reveal{opacity:1!important;transform:none!important}
 @media (max-width:760px){.hub-join-grid{grid-template-columns:1fr}}
 .hub-join-grid .join-card{background:var(--surface);box-shadow:inset 0 0 0 1px var(--hair)}
 .contact-proof{margin-top:1.6rem;font-size:.84rem;color:var(--muted);line-height:1.7;padding-left:1em;border-left:3px solid var(--accent)}
+
+/* /work-with-us page */
+.wwu-card-body{color:var(--muted);font-size:.9rem;line-height:1.75;margin:.5rem 0 1.1rem}
+.track-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.6rem;margin-top:1rem}
+.track-col .block-label{margin-bottom:.7rem}
 /* hub activity cards: project title in JA should use the body font stack */
 #activities .project h3{font-family:var(--font-jp),var(--font-latin),sans-serif;font-size:1.3rem}
 
