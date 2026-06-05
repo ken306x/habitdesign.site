@@ -549,6 +549,13 @@ html:not(.js) .reveal{opacity:1!important;transform:none!important}
 .wwu-card-body{color:var(--muted);font-size:.9rem;line-height:1.75;margin:.5rem 0 1.1rem}
 .track-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.6rem;margin-top:1rem}
 .track-col .block-label{margin-bottom:.7rem}
+
+/* /profile page */
+.profile-head{display:grid;grid-template-columns:300px 1fr;gap:clamp(1.4rem,4vw,3rem);align-items:center;margin-top:1.4rem}
+@media (max-width:760px){.profile-head{grid-template-columns:1fr;gap:1.4rem}}
+.profile-photo img{width:100%;max-width:300px;height:auto;border-radius:20px;display:block;box-shadow:inset 0 0 0 1px var(--hair)}
+.profile-role{font-family:var(--font-mono);font-size:.86rem;color:var(--accent);margin:.5rem 0 1rem;letter-spacing:.02em}
+.prof-blocks{display:flex;flex-direction:column;gap:2rem}
 /* hub activity cards: project title in JA should use the body font stack */
 #activities .project h3{font-family:var(--font-jp),var(--font-latin),sans-serif;font-size:1.3rem}
 
