@@ -745,6 +745,8 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 .ref-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
 .ref-list li{font-size:.86rem;color:var(--muted);line-height:1.6;padding-left:1em;position:relative}
 .ref-list li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.6}
+.ref-link{color:inherit;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s}
+.ref-link:hover{color:var(--accent)}
 
 /* fun-card icon alignment (uses .method-ic badge) */
 .fun-card .method-ic{margin-bottom:.7rem}
