@@ -7,7 +7,7 @@ window.NEWS_TAG_LABELS = {
 };
 window.NEWS_ALL = [
   { date: "2026.03.06", tags: ["研究"], ja: "情報処理学会 第88回全国大会で「教育支援AIチャットボットの実践事例ナレッジベースの構築」を発表しました。", en: "Presented “Building a case knowledge base for educational AI chatbots” at IPSJ's 88th National Convention." },
-  { date: "2026.02.20", tags: ["研究室"], ja: "#HABITUS2025 宮城大学卒業研究制作展＠メディアテークにて習慣化デザイン研究を展示しました。", en: "Exhibited habit-design research at #HABITUS2025, the Miyagi University graduation exhibition @ Mediatheque." },
+  { date: "2026.02.20", tags: ["研究室"], ja: "#HABITUS2025 宮城大学卒業研究制作展＠メディアテークにて習慣化デザイン研究を展示しました。", en: "Exhibited habit-design research at #HABITUS2025, the Miyagi University graduation exhibition @ Mediatheque.", links: [{ href: "https://www.myu.ac.jp/news/news/8982/", ja: "宮城大学ニュース \u2192", en: "MYU news \u2192" }, { href: "https://www.youtube.com/watch?v=m2w2z6OWzWc&list=PL-nkSu8lcYNIOwtkxR-JukGe7BJTISdum", ja: "YouTube で見る \u2192", en: "Watch on YouTube \u2192", yt: true }] },
   { date: "2026.01.30", tags: ["研究室", "表彰"], ja: "内閣官房主催 イチBizアワード2025 にて、太田研究室Bチームが協賛企業賞2件（国際航業様・ゼンリン様）を受賞しました。", en: "Ohta Lab Team B won two partner-company awards (Kokusai Kogyo, Zenrin) at the Cabinet Secretariat's Ichi-Biz Award 2025." },
   { date: "2026.01.15", tags: ["研究"], ja: "情報処理学会論文誌に論文「大規模言語モデルを用いた健康習慣化事業の事例データ管理フレームワークの構築」が掲載されました。", en: "Our paper on an LLM-based case-data framework for health habit programs appeared in the IPSJ Journal." },
   { date: "2025.12.26", tags: ["地域課題解決", "研究室"], ja: "「回覧板で振り返る！2025年の泉パークタウン」コンテンツを泉パークタウン公式LINEに配信いただきました。", en: "Our “Looking back on 2025 Izumi Park Town” content was distributed via the official Izumi Park Town LINE." },
