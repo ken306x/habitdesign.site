@@ -149,7 +149,7 @@ window.LAB_DATA = {
         { cat: "著書", year: "2023/3/25", venue: "翻訳", title: "コンピュータネットワーク 第6版（A. S. タネンバウム ほか）", authors: "アンドリュー・S・タネンバウム, ニック・フィームスター, デビッド.J.ウェセラル (著) / 水野 忠則, 相田 仁, 東野 輝夫, 太田 賢, 西垣 正勝, 渡辺 尚 (翻訳)", url: "https://www.amazon.co.jp/コンピュータネットワーク第6版-アンドリュー・S・タネンバウム/dp/4296070428" },
         { cat: "講演", year: "2023/11/6", venue: "ドコモmeetup＠NTTドコモ東北支社", title: "未来を創る学び直しと習慣化デザイン", authors: "太田 賢" },
         { cat: "講演", year: "2023/10/23", venue: "仙台金融経済懇話会", title: "DX時代に挑戦する現場のためのリスキリングプログラムと習慣化デザイン", authors: "太田 賢" },
-        { cat: "著書", year: "2016", venue: "未来へつなぐデジタルシリーズ 33", title: "モバイルネットワーク", authors: "水野 忠則 (監修), 内藤 彩乃 (監修・著), 北須賀 輝明, 鈴木 秀和, 稲村 浩, 太田 賢, 今井 哲朗, 奥村 幸彦, 鈴木 信雄, 吉廣 卓哉, 森野 博章, 神崎 映光, 江原 正規, 梶 克彦, 村尾 和哉 (著)", url: "https://www.amazon.co.jp/dp/4320123530/" },
+        { cat: "著書", year: "2016/3/10", venue: "未来へつなぐデジタルシリーズ 33", title: "モバイルネットワーク", authors: "水野 忠則 (監修), 内藤 彩乃 (監修・著), 北須賀 輝明, 鈴木 秀和, 稲村 浩, 太田 賢, 今井 哲朗, 奥村 幸彦, 鈴木 信雄, 吉廣 卓哉, 森野 博章, 神崎 映光, 江原 正規, 梶 克彦, 村尾 和哉 (著)", url: "https://www.amazon.co.jp/dp/4320123530/" },
       ]
     },
     news: {
@@ -401,7 +401,7 @@ window.LAB_DATA = {
         { cat: "Book", year: "2023/3/25", venue: "Translation", title: "Computer Networks, 6th ed. (Tanenbaum et al.)", authors: "A. S. Tanenbaum, N. Feamster, D. J. Wetherall (authors) / T. Mizuno, H. Aida, T. Higashino, K. Ohta, M. Nishigaki, T. Watanabe (trans.)", url: "https://www.amazon.co.jp/コンピュータネットワーク第6版-アンドリュー・S・タネンバウム/dp/4296070428" },
         { cat: "Talk", year: "2023/11/6", venue: "Docomo Meetup @ NTT Docomo Tohoku Branch", title: "Learning again and habit-formation design for the future", authors: "K. Ohta" },
         { cat: "Talk", year: "2023/10/23", venue: "Sendai Financial & Economic Forum", title: "Reskilling programs and habit-formation design for frontline workers in the DX era", authors: "K. Ohta" },
-        { cat: "Book", year: "2016", venue: "Digital Series 33", title: "Mobile Networks", authors: "T. Mizuno (supervising ed.), A. Naito (supervising ed. & author), T. Kitasuka, H. Suzuki, H. Inamura, K. Ohta, T. Imai, Y. Okumura, N. Suzuki, T. Yoshihiro, H. Morino, H. Kanzaki, M. Ehara, K. Kaji, K. Murao (authors)", url: "https://www.amazon.co.jp/dp/4320123530/" },
+        { cat: "Book", year: "2016/3/10", venue: "Digital Series 33", title: "Mobile Networks", authors: "T. Mizuno (supervising ed.), A. Naito (supervising ed. & author), T. Kitasuka, H. Suzuki, H. Inamura, K. Ohta, T. Imai, Y. Okumura, N. Suzuki, T. Yoshihiro, H. Morino, H. Kanzaki, M. Ehara, K. Kaji, K. Murao (authors)", url: "https://www.amazon.co.jp/dp/4320123530/" },
       ]
     },
     news: {
