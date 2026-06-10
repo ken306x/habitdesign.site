@@ -134,7 +134,7 @@ window.LAB_DATA = {
       items: [
         { cat: "論文", year: "2026", venue: "情報処理学会論文誌 Vol.67", title: "大規模言語モデルを用いた健康習慣化事業の事例データ管理フレームワークの構築", authors: "太田 賢" },
         { cat: "論文", year: "2026", venue: "情報処理学会 第88回全国大会", title: "教育支援 AI チャットボットの実践事例ナレッジベースの構築", authors: "太田 賢" },
-        { cat: "受賞", year: "2025", venue: "内閣官房主催 イチBizアワード2025", title: "協賛企業賞 2件（国際航業様・ゼンリン様）", authors: "太田研究室 B チーム" },
+        { cat: "受賞", year: "2025", venue: "内閣官房主催 イチBizアワード2025", title: "協賛企業賞 2件（国際航業様・ゼンリン様）", authors: "太田研究室 B チーム", url: "https://g-idea.go.jp/2025/winner/" },
         { cat: "受賞", year: "2025", venue: "DICOMO2025 シンポジウム", title: "優秀論文賞「地域の運動・健康増進事例を活用した習慣化事業支援システム」", authors: "太田 賢", url: "https://cir.nii.ac.jp/crid/1050868981231363840" },
         { cat: "受賞", year: "2025", venue: "学都「仙台・宮城」サイエンス・デイ", title: "役に立つ地学賞2025（仙台・東北のお祭りをビッグデータでみよう！）", authors: "太田研究室" },
         { cat: "受賞", year: "2024", venue: "情報処理学会 DICOMO2024", title: "活動功労賞", authors: "太田 賢" },
@@ -381,7 +381,7 @@ window.LAB_DATA = {
       items: [
         { cat: "Paper", year: "2026", venue: "IPSJ Journal Vol.67", title: "An LLM-based case-data management framework for health habit programs", authors: "K. Ohta" },
         { cat: "Paper", year: "2026", venue: "IPSJ 88th National Convention", title: "Building a case knowledge base for educational AI chatbots", authors: "K. Ohta" },
-        { cat: "Award", year: "2025", venue: "Ichi-Biz Award 2025 (Cabinet Secretariat)", title: "Two partner-company awards (Kokusai Kogyo, Zenrin)", authors: "Ohta Lab Team B" },
+        { cat: "Award", year: "2025", venue: "Ichi-Biz Award 2025 (Cabinet Secretariat)", title: "Two partner-company awards (Kokusai Kogyo, Zenrin)", authors: "Ohta Lab Team B", url: "https://g-idea.go.jp/2025/winner/" },
         { cat: "Award", year: "2025", venue: "DICOMO 2025", title: "Best Paper: A habit-program support system using regional exercise/health cases", authors: "K. Ohta", url: "https://cir.nii.ac.jp/crid/1050868981231363840" },
         { cat: "Award", year: "2025", venue: "Sendai-Miyagi Science Day", title: "2025 prize (‘See Tohoku's festivals through big data’)", authors: "Ohta Lab" },
         { cat: "Award", year: "2024", venue: "IPSJ DICOMO 2024", title: "Service Award", authors: "K. Ohta" },
