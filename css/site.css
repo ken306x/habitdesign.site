@@ -496,6 +496,7 @@ img.project-shot{width:100%;height:auto;display:block;border-radius:12px;box-sha
 .faq-item.open .faq-a{display:block}
 .fineprint{display:block}
 figure.figure{margin:0}
+figure.pub-catch{margin-bottom:2rem}
 /* progressive enhancement: reveal hides only when JS is active.
    Without JS (or for non-scrolling crawlers / print) content stays visible. */
 html:not(.js) .reveal{opacity:1!important;transform:none!important}
