@@ -143,7 +143,7 @@ window.LAB_DATA = {
         { cat: "論文", year: "2025", venue: "DICOMO2025（招待講演）", title: "人と AI の協働による行動変容支援 —運動・健康・学びを支える習慣化デザイン—", authors: "太田 賢" },
         { cat: "論文", year: "2025", venue: "DICOMO2025", title: "地域の健康と食習慣を支援するプラットフォームの構築", authors: "舛井 道晴", url: "https://cir.nii.ac.jp/crid/1050024556301231616" },
         { cat: "著書", year: "2024", venue: "未来へつなぐデジタルシリーズ", title: "コンピュータネットワーク概論 第2版", authors: "（共著）" },
-        { cat: "著書", year: "2023", venue: "翻訳", title: "コンピュータネットワーク 第6版（A. S. タネンバウム ほか）", authors: "太田 賢 ほか 訳", url: "https://www.amazon.co.jp/コンピュータネットワーク第6版-アンドリュー・S・タネンバウム/dp/4296070428" },
+        { cat: "著書", year: "2023", venue: "翻訳", title: "コンピュータネットワーク 第6版（A. S. タネンバウム ほか）", authors: "アンドリュー・S・タネンバウム, ニック・フィームスター, デビッド.J.ウェセラル (著) / 水野 忠則, 相田 仁, 東野 輝夫, 太田 賢, 西垣 正勝, 渡辺 尚 (翻訳)", url: "https://www.amazon.co.jp/コンピュータネットワーク第6版-アンドリュー・S・タネンバウム/dp/4296070428" },
       ],
     },
     news: {
@@ -389,7 +389,7 @@ window.LAB_DATA = {
         { cat: "Paper", year: "2025", venue: "DICOMO 2025 (Invited)", title: "Human–AI collaboration for behavior change — habit design for exercise, health and learning", authors: "K. Ohta" },
         { cat: "Paper", year: "2025", venue: "DICOMO 2025", title: "Building a platform to support regional health and diet habits", authors: "M. Masui", url: "https://cir.nii.ac.jp/crid/1050024556301231616" },
         { cat: "Book", year: "2024", venue: "Digital Series", title: "Introduction to Computer Networks, 2nd ed.", authors: "(co-author)" },
-        { cat: "Book", year: "2023", venue: "Translation", title: "Computer Networks, 6th ed. (Tanenbaum et al.)", authors: "trans. K. Ohta et al.", url: "https://www.amazon.co.jp/コンピュータネットワーク第6版-アンドリュー・S・タネンバウム/dp/4296070428" },
+        { cat: "Book", year: "2023", venue: "Translation", title: "Computer Networks, 6th ed. (Tanenbaum et al.)", authors: "A. S. Tanenbaum, N. Feamster, D. J. Wetherall (authors) / T. Mizuno, H. Aida, T. Higashino, K. Ohta, M. Nishigaki, T. Watanabe (trans.)", url: "https://www.amazon.co.jp/コンピュータネットワーク第6版-アンドリュー・S・タネンバウム/dp/4296070428" },
       ],
     },
     news: {
