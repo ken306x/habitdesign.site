@@ -766,6 +766,17 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 .myp-hero-lead{color:rgba(243,242,238,.84);font-size:clamp(1rem,1.6vw,1.18rem);line-height:1.8;max-width:42ch;margin-bottom:1.6rem}
 @media (prefers-reduced-motion:no-preference){.myp-hero{animation:kb 12s ease-out both}}
 
+/* ── 祭りデザインラボ: crossfade photo hero (reuses #heroSlides rotation) ── */
+.matsuri-hero{position:relative;display:flex;align-items:flex-end;min-height:clamp(420px,66vh,600px);overflow:hidden;background:#0a0c10}
+.matsuri-hero .hero-slide{background-position:center}
+.matsuri-hero-scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(8,9,12,.92) 4%,rgba(8,9,12,.5) 40%,rgba(8,9,12,.2) 72%,rgba(8,9,12,.42) 100%)}
+.matsuri-hero-inner{position:relative;z-index:2;padding-block:clamp(2rem,5vh,3.4rem) clamp(2.6rem,7vh,4rem)}
+.matsuri-hero .sec-kicker{color:rgba(243,242,238,.7)}
+.matsuri-hero .sec-num{color:var(--accent)}
+.matsuri-hero-h{color:#f3f2ee;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.06;letter-spacing:-.01em;font-weight:800;margin:.2rem 0 .9rem}
+.matsuri-hero-lead{color:rgba(243,242,238,.86);font-size:clamp(1rem,1.6vw,1.16rem);line-height:1.8;max-width:48ch}
+
 /* today's tip "omikuji" next button + flip */
 .tip-next{margin-top:1rem;background:none;border:0;cursor:pointer;font-family:var(--font-mono);
   font-size:.78rem;letter-spacing:.04em;color:var(--accent);padding:.2rem 0}
