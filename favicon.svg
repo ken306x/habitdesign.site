@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="習慣化デザインラボ">
-  <rect width="24" height="24" rx="5" fill="#14181f"/>
-  <rect x="3.4" y="16" width="5" height="5" rx="1.1" fill="#e6863c"/>
-  <rect x="9.7" y="16" width="5" height="5" rx="1.1" fill="#8a8f98"/>
-  <rect x="9.7" y="9.7" width="5" height="5" rx="1.1" fill="#e6863c"/>
-  <rect x="16" y="16" width="5" height="5" rx="1.1" fill="#8a8f98"/>
-  <rect x="16" y="9.7" width="5" height="5" rx="1.1" fill="#8a8f98"/>
-  <rect x="16" y="3.4" width="5" height="5" rx="1.1" fill="#e6863c"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" rx="26" fill="#0F1115"/><g transform="matrix(1,0,-0.16,1,10,0)"><polygon points="20.0,100.0 20.0,80.0 46.7,80.0 46.7,66.7 73.3,66.7 73.3,53.3 100.0,53.3 100.0,40.0 100.0,100.0" fill="#FFFFFF"/><polygon points="20.0,20.0 100.0,20.0 100.0,32.0 100.0,45.3 73.3,45.3 73.3,58.7 46.7,58.7 46.7,72.0 20.0,72.0" fill="#FFFFFF" opacity="0.4"/></g></svg>
