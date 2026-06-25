@@ -6,6 +6,7 @@ window.NEWS_TAG_LABELS = {
   en: { "研究": "Research", "研究室": "Lab", "表彰": "Award", "教育": "Education", "地域課題解決": "Community", "DDX": "DDX", "Web": "Web", "書籍": "Book" },
 };
 window.NEWS_ALL = [
+  { date: "2026.06.25", tags: ["研究"], ja: "情報処理学会DICOMOシンポジウム2026にて、株式会社インテックとの共同研究「スマート家電を活用した環境介入型運動習慣支援サービスの提案とそのユーザー受容性：横断的アンケート調査」を発表しました。", en: "Presented joint research with INTEC Inc., “A smart-appliance environmental-intervention service for exercise habits and its user acceptance: a cross-sectional survey,” at IPSJ DICOMO 2026." },
   { date: "2026.03.06", tags: ["研究"], ja: "情報処理学会 第88回全国大会で「教育支援AIチャットボットの実践事例ナレッジベースの構築」を発表しました。", en: "Presented “Building a case knowledge base for educational AI chatbots” at IPSJ's 88th National Convention." },
   { date: "2026.02.20", tags: ["研究室"], ja: "#HABITUS2025 宮城大学卒業研究制作展＠メディアテークにて習慣化デザイン研究を展示しました。", en: "Exhibited habit-design research at #HABITUS2025, the Miyagi University graduation exhibition @ Mediatheque.", links: [{ href: "https://www.myu.ac.jp/news/news/8982/", ja: "宮城大学ニュース \u2192", en: "MYU news \u2192" }, { href: "https://www.youtube.com/watch?v=m2w2z6OWzWc&list=PL-nkSu8lcYNIOwtkxR-JukGe7BJTISdum", ja: "YouTube で見る \u2192", en: "Watch on YouTube \u2192", yt: true }] },
   { date: "2026.01.30", tags: ["研究室", "表彰"], ja: "内閣官房主催 イチBizアワード2025 にて、太田研究室Bチームが協賛企業賞2件（国際航業様・ゼンリン様）を受賞しました。", en: "Ohta Lab Team B won two partner-company awards (Kokusai Kogyo, Zenrin) at the Cabinet Secretariat's Ichi-Biz Award 2025.", links: [{ href: "https://g-idea.go.jp/2025/winner/", ja: "受賞者ページ →", en: "Award winners →" }] },
