@@ -414,6 +414,14 @@ img.project-shot{width:100%;height:auto;display:block;border-radius:12px;box-sha
 .f-note{opacity:.7;max-width:40ch;margin-left:auto}
 @media (max-width:600px){.footer-meta{text-align:left}.f-note{margin-left:0}}
 .footer-block{margin-top:0;padding-bottom:3rem}
+/* footer sitemap nav */
+.footer-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem 2rem;padding-bottom:2.2rem;margin-bottom:2rem;border-bottom:1px solid var(--hair)}
+.footer-nav-col h4{margin:0 0 .8rem;font-family:var(--font-mono);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.footer-nav-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.footer-nav-col a{color:var(--text);text-decoration:none;font-size:.9rem;line-height:1.4}
+.footer-nav-col a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:720px){.footer-nav{grid-template-columns:repeat(2,1fr);gap:1.4rem 1.6rem}}
+@media (max-width:440px){.footer-nav{grid-template-columns:1fr}}
 
 /* ───────── more link ───────── */
 .more-row{margin-top:2rem}
