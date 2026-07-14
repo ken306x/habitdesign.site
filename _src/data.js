@@ -109,18 +109,21 @@ window.LAB_DATA = {
         body: "宮城大学 事業構想学群 価値創造デザイン学類。静岡県静岡市出身。前職は NTT ドコモで、モバイル・IoT・AI・ビッグデータの新サービス研究開発に従事。",
         tags: ["サイバーフィジカルシステム", "モバイルコンピューティング", "ICT 行動変容システム", "行動・習慣化デザイン"],
       },
+      /* 学部生の名簿は membersPage（/ohtalab/members.html）が正本。ここは大学院生のみ。 */
       groups: [
         { label: "大学院生", people: [{ name: "舛井 道晴", role: "博士後期" }] },
-        { label: "学部生", people: [
-          { name: "○○ ○○", role: "B4" }, { name: "○○ ○○", role: "B4" },
-          { name: "○○ ○○", role: "B4" }, { name: "○○ ○○", role: "B3" },
-          { name: "○○ ○○", role: "B3" }, { name: "○○ ○○", role: "B3" },
-        ] },
       ],
-      note: "※ 学部生の氏名はプレースホルダです。実際の名簿に差し替えてください。",
       cohortsLabel: "集合写真",
       cohortSuffix: "年度 配属生",
       rosterLink: "配属生と卒業研究テーマの一覧",
+    },
+    /* note 連載への導線（ハブ・研究室トップの noteBand）。URLは build.js の NOTE_URL。 */
+    note: {
+      kicker: "note",
+      title: "続く仕組みの実験ノート",
+      lead: "習慣化を研究しながら、自分自身の「続かない」を実験しています。うまくいかなかった方法も含めて、noteで連載中です。",
+      cta: "noteで読む",
+      account: "太田賢｜習慣化デザイン",
     },
     /* メンバー一覧ページ（/ohtalab/members.html）。
        卒業生は卒業論文・予稿集の確定タイトル、現4年は検討中のため領域キーワードのみ。 */
@@ -424,16 +427,17 @@ window.LAB_DATA = {
       },
       groups: [
         { label: "Graduate", people: [{ name: "Michiharu Masui", role: "Ph.D." }] },
-        { label: "Undergrad", people: [
-          { name: "○○ ○○", role: "B4" }, { name: "○○ ○○", role: "B4" },
-          { name: "○○ ○○", role: "B4" }, { name: "○○ ○○", role: "B3" },
-          { name: "○○ ○○", role: "B3" }, { name: "○○ ○○", role: "B3" },
-        ] },
       ],
-      note: "* Undergraduate names are placeholders — replace with the real roster.",
       cohortsLabel: "Group photos",
       cohortSuffix: " cohort",
       rosterLink: "Students & thesis topics",
+    },
+    note: {
+      kicker: "note",
+      title: "Field notes on what makes habits stick",
+      lead: "I research habits — and run experiments on my own failures to keep them. An ongoing series on note, including the methods that did not work.",
+      cta: "Read on note",
+      account: "Ken Ohta — Habit Design",
     },
     membersPage: {
       num: "04",
