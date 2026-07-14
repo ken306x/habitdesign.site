@@ -490,6 +490,23 @@ img.project-shot{width:100%;height:auto;display:block;border-radius:12px;box-sha
 .cohorts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 @media (max-width:760px){.cohorts{grid-template-columns:1fr}}
 .cohort img{aspect-ratio:4/3}
+
+/* ───────── roster (members.html: 氏名 + 卒業研究テーマ) ───────── */
+.roster{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin:0 0 2.6rem}
+@media (max-width:760px){.roster{grid-template-columns:1fr}}
+.roster-item{background:var(--surface);border-radius:12px;padding:1rem 1.2rem;box-shadow:inset 0 0 0 1px var(--hair)}
+.roster-name{font-weight:600;font-size:1rem;letter-spacing:.02em}
+.roster-role{font-family:var(--font-mono);font-size:.7rem;color:var(--muted);letter-spacing:.06em}
+.roster-theme{margin:.35rem 0 0;font-size:.9rem;line-height:1.7;color:var(--muted)}
+.roster-note{margin:-.6rem 0 1.4rem;font-size:.86rem;color:var(--muted)}
+.roster-cohort{margin-bottom:1rem}
+.roster-head{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.1rem}
+.roster-year{margin:0;font-size:1.05rem;font-weight:600;flex:1}
+.roster-photo{width:min(280px,42%);aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+@media (max-width:600px){
+  .roster-head{flex-direction:column;align-items:flex-start;gap:.8rem}
+  .roster-photo{width:100%}
+}
 /* join banner */
 .join-banner-sec{padding-top:1.4rem}
 .join-banner img{height:clamp(260px,46vh,500px)}
