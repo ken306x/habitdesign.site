@@ -268,7 +268,7 @@ html.noanim .ladder .cell.top{background:var(--accent)}
 .domain-card-close{position:absolute;top:.75rem;right:1rem;background:none;border:none;font-size:1.3rem;line-height:1;cursor:pointer;color:var(--muted);padding:.2rem .4rem;border-radius:6px;transition:color .15s}
 .domain-card-close:hover{color:var(--text)}
 .domain-card-title{font-size:1.05rem;font-weight:700;margin-bottom:1rem;color:var(--text)}
-.domain-card-issue{font-size:.97rem;line-height:1.75;color:var(--text);border-left:3px solid var(--accent);background:color-mix(in oklab,var(--accent) 9%,transparent);padding:.75rem 1rem;border-radius:0 10px 10px 0;margin-bottom:1rem}
+.domain-card-issue{font-size:.97rem;line-height:1.75;color:var(--text);border-left:3px solid var(--accent);background:color-mix(in oklab,var(--accent) 9%,transparent);padding:.75rem 1rem;border-radius:0 5px 5px 0;margin-bottom:1rem}
 .domain-card-approach{font-size:.86rem;line-height:1.8;color:var(--muted)}
 /* projects */
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}

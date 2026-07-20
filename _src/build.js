@@ -1834,7 +1834,7 @@ function caseIzumiPageBody() {
   const vidLabel = field("動画で見る", "Watch the videos");
   const v1Cap = fieldJ("デジタル回覧板アプリ「まちひろば」", "“Machihiroba” digital bulletin-board app");
   const v2Cap = fieldJ("LINEボット「チョッピー」", "“Choppy” LINE bot");
-  const ytFig = (id, ttl, cap) => `<figure class="reveal" style="margin:0"><div style="position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--hair);background:#000"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${esc(ttl)}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption class="figure-cap"${cap.attr}>${cap.v}</figcaption></figure>`;
+  const ytFig = (id, ttl, cap) => `<figure class="reveal" style="margin:0"><div style="position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--hair);background:#000"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${esc(ttl)}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption class="figure-cap"${cap.attr}>${cap.v}</figcaption></figure>`;
   const vidsHtml = ytFig("UNg82yhyloU", "まちひろば", v1Cap) + ytFig("Spp5mOSV4js", "チョッピー", v2Cap);
 
   // cta
