@@ -206,7 +206,7 @@ function tag(ja, en, tone = "soft") {
 }
 function figure(src, alt, jaCap, enCap, cls = "", ratio = "", capHtml = false) {
   const cap = jaCap ? field(jaCap, enCap, capHtml) : null;
-  const style = ratio ? ` style="aspect-ratio:${ratio};border-radius:18px"` : ` style="border-radius:18px"`;
+  const style = ratio ? ` style="aspect-ratio:${ratio};border-radius:6px"` : ` style="border-radius:6px"`;
   return `<figure class="figure reveal ${cls}"><img src="${src}" alt="${esc(alt || "")}" loading="lazy"${style}>${cap ? `<figcaption class="figure-cap"${cap.attr}>${cap.v}</figcaption>` : ""}</figure>`;
 }
 
