@@ -9,7 +9,7 @@
   --cta-bg:#2a2723; --nav-bg:rgba(239,233,219,.80);
   --accent:oklch(0.60 0.12 48); --accent-strong:oklch(0.54 0.13 46);
   --on-accent:#f4efe4; --accent-hex:#b5611f;
-  --font-jp:'Zen Kaku Gothic New'; --font-latin:'Schibsted Grotesk';
+  --font-jp:'Zen Kaku Gothic New'; --font-mincho:'Zen Old Mincho'; --font-latin:'Space Mono';
   --sec-pad:8.5rem; --wrap:1140px;
 }
 /* anchor offset so sticky nav doesn't cover section tops */
@@ -36,7 +36,7 @@ body{background:#0e1014}
 .section{padding-block:var(--sec-pad);position:relative}
 .section-alt{background:var(--surface-2)}
 h1,h2,h3,h4{font-weight:700;line-height:1.18;letter-spacing:-.01em;text-wrap:balance}
-.app[data-font="mincho"] h1,.app[data-font="mincho"] h2,.app[data-font="mincho"] h3{font-weight:600;letter-spacing:0}
+.app[data-font="mincho"] h1,.app[data-font="mincho"] h2,.app[data-font="mincho"] h3{font-family:var(--font-mincho),serif;font-weight:600;letter-spacing:.04em}
 p{text-wrap:pretty}
 a{color:inherit}
 ::selection{background:var(--accent);color:var(--on-accent)}

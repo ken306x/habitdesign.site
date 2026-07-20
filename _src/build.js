@@ -2353,7 +2353,7 @@ function hubBody() {
 }
 
 /* ---- page wrapper ---------------------------------------------------- */
-const FONTS ="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Schibsted+Grotesk:wght@400..900&family=Space+Mono:wght@400;700&display=swap";
+const FONTS ="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap";
 
 /* GA4 measurement ID — set to "G-XXXXXXXXXX" to enable analytics (empty = off) */
 const GA_ID = "G-S73V4YS9JN";
@@ -2404,7 +2404,7 @@ ${ldHtml}
 <link rel="stylesheet" href="/css/site.css?v=${ASSET_VER}">
 </head>
 <body>
-<div class="app" id="top" data-scheme="light" data-font="zen">
+<div class="app" id="top" data-scheme="light" data-font="mincho">
 ${navHtml}
 <main>
 ${bodyHtml}
