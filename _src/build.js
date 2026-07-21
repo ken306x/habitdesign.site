@@ -400,7 +400,7 @@ function members() {
     if (y === "2024") {
       const jaCap = `2024${esc(m.cohortSuffix)}（<a href="${YT_COHORT}" target="_blank" rel="noopener">${YT_ICON}#HABITUS2025</a>）`;
       const enCap = `2024${esc(e.cohortSuffix)}（<a href="${YT_COHORT}" target="_blank" rel="noopener">${YT_ICON}#HABITUS2025</a>）`;
-      return figure("/assets/members-2024.jpg", "2024年度 配属生（#HABITUS2025）", jaCap, enCap, "cohort", "4 / 3", true);
+      return figure("/assets/members-2024.jpg", "2024年度 配属生（#HABITUS2025）", jaCap, enCap, "cohort photo-record", "4 / 3", true);
     }
     return figure(`/assets/members-${y}.jpg`, y + m.cohortSuffix, y + m.cohortSuffix, y + e.cohortSuffix, "cohort", "4 / 3");
   }).join("");
@@ -699,7 +699,7 @@ function newsArchivePage() {
 /* ---- ADMISSIONS (配属案内) ------------------------------------------- */
 function admissionsBody() {
   const j = JA.join, e = EN.join, te = JA.teaching, tee = EN.teaching, w = JA.works, we = EN.works;
-  const banner = figure("/assets/members-2025.jpg", "2025年度 配属生", "2025年度 配属生 · “You have own secret wings…”", "2025 cohort · “You have own secret wings…”", "join-banner");
+  const banner = figure("/assets/members-2025.jpg", "2025年度 配属生", "2025年度 配属生 · “You have own secret wings…”", "2025 cohort · “You have own secret wings…”", "join-banner photo-record");
   // WHY
   const whyH = fieldJ(j.why, e.why);
   const whyBody = fieldJ(j.whyBody, e.whyBody);
