@@ -712,7 +712,7 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 @media (max-width:680px){.res-next{grid-template-columns:1fr}}
 .res-next-card{display:flex;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;
   background:var(--surface);border-radius:6px;padding:1.3rem 1.5rem;box-shadow:inset 0 0 0 1px var(--hair);
-  transition:transform .2s,box-shadow .2s}
+  transition:box-shadow .2s}
 .res-next-card:hover{box-shadow:inset 0 0 0 1px var(--accent)}
 .res-next-card h3{font-size:1.05rem;margin-bottom:.25rem;color:var(--text)}
 .res-next-card p{font-size:.86rem;color:var(--muted);line-height:1.6}
@@ -722,7 +722,7 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 .book-picks{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 @media (max-width:780px){.book-picks{grid-template-columns:1fr}}
 .book-pick{position:relative;display:block;text-decoration:none;background:var(--surface);border-radius:6px;
-  padding:1.4rem 1.5rem;box-shadow:inset 0 0 0 1px var(--hair);border-top:3px solid var(--accent);transition:transform .2s,box-shadow .2s}
+  padding:1.4rem 1.5rem;box-shadow:inset 0 0 0 1px var(--hair);border-top:3px solid var(--accent);transition:box-shadow .2s}
 .book-pick:hover{box-shadow:inset 0 0 0 1px var(--accent)}
 .book-pick h3{font-size:1rem;line-height:1.5;margin-bottom:.5rem;color:var(--text)}
 .book-pick p{font-size:.86rem;color:var(--muted);line-height:1.7}
@@ -861,5 +861,5 @@ a.res-title:hover{color:var(--accent);text-decoration:underline;text-underline-o
 @media (max-width:560px){.bld-conj{display:none}.bld-field{flex:1 1 100%}}
 
 @media (hover:none){
-  .domain:hover,.col-card:hover,.theme-chip:hover{box-shadow:inset 0 0 0 1px var(--hair)}
+  .domain:hover,.col-card:hover,.theme-chip:hover,.res-next-card:hover,.book-pick:hover{box-shadow:inset 0 0 0 1px var(--hair)}
 }
