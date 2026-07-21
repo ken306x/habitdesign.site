@@ -402,7 +402,7 @@ function members() {
       const enCap = `2024${esc(e.cohortSuffix)}（<a href="${YT_COHORT}" target="_blank" rel="noopener">${YT_ICON}#HABITUS2025</a>）`;
       return figure("/assets/members-2024.jpg", "2024年度 配属生（#HABITUS2025）", jaCap, enCap, "cohort photo-record", "4 / 3", true);
     }
-    return figure(`/assets/members-${y}.jpg`, y + m.cohortSuffix, y + m.cohortSuffix, y + e.cohortSuffix, "cohort", "4 / 3");
+    return figure(`/assets/members-${y}.jpg`, y + m.cohortSuffix, y + m.cohortSuffix, y + e.cohortSuffix, "cohort photo-record", "4 / 3");
   }).join("");
   return `<section id="members" class="section section-alt">
   <div class="wrap">
