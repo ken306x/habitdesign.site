@@ -206,7 +206,7 @@ function tag(ja, en, tone = "soft") {
 }
 function figure(src, alt, jaCap, enCap, cls = "", ratio = "", capHtml = false) {
   const cap = jaCap ? field(jaCap, enCap, capHtml) : null;
-  const style = ratio ? ` style="aspect-ratio:${ratio};border-radius:18px"` : ` style="border-radius:18px"`;
+  const style = ratio ? ` style="aspect-ratio:${ratio};border-radius:6px"` : ` style="border-radius:6px"`;
   return `<figure class="figure reveal ${cls}"><img src="${src}" alt="${esc(alt || "")}" loading="lazy"${style}>${cap ? `<figcaption class="figure-cap"${cap.attr}>${cap.v}</figcaption>` : ""}</figure>`;
 }
 
@@ -400,9 +400,9 @@ function members() {
     if (y === "2024") {
       const jaCap = `2024${esc(m.cohortSuffix)}（<a href="${YT_COHORT}" target="_blank" rel="noopener">${YT_ICON}#HABITUS2025</a>）`;
       const enCap = `2024${esc(e.cohortSuffix)}（<a href="${YT_COHORT}" target="_blank" rel="noopener">${YT_ICON}#HABITUS2025</a>）`;
-      return figure("/assets/members-2024.jpg", "2024年度 配属生（#HABITUS2025）", jaCap, enCap, "cohort", "4 / 3", true);
+      return figure("/assets/members-2024.jpg", "2024年度 配属生（#HABITUS2025）", jaCap, enCap, "cohort photo-record", "4 / 3", true);
     }
-    return figure(`/assets/members-${y}.jpg`, y + m.cohortSuffix, y + m.cohortSuffix, y + e.cohortSuffix, "cohort", "4 / 3");
+    return figure(`/assets/members-${y}.jpg`, y + m.cohortSuffix, y + m.cohortSuffix, y + e.cohortSuffix, "cohort photo-record", "4 / 3");
   }).join("");
   return `<section id="members" class="section section-alt">
   <div class="wrap">
@@ -699,7 +699,7 @@ function newsArchivePage() {
 /* ---- ADMISSIONS (配属案内) ------------------------------------------- */
 function admissionsBody() {
   const j = JA.join, e = EN.join, te = JA.teaching, tee = EN.teaching, w = JA.works, we = EN.works;
-  const banner = figure("/assets/members-2025.jpg", "2025年度 配属生", "2025年度 配属生 · “You have own secret wings…”", "2025 cohort · “You have own secret wings…”", "join-banner");
+  const banner = figure("/assets/members-2025.jpg", "2025年度 配属生", "2025年度 配属生 · “You have own secret wings…”", "2025 cohort · “You have own secret wings…”", "join-banner photo-record");
   // WHY
   const whyH = fieldJ(j.why, e.why);
   const whyBody = fieldJ(j.whyBody, e.whyBody);
@@ -1834,7 +1834,7 @@ function caseIzumiPageBody() {
   const vidLabel = field("動画で見る", "Watch the videos");
   const v1Cap = fieldJ("デジタル回覧板アプリ「まちひろば」", "“Machihiroba” digital bulletin-board app");
   const v2Cap = fieldJ("LINEボット「チョッピー」", "“Choppy” LINE bot");
-  const ytFig = (id, ttl, cap) => `<figure class="reveal" style="margin:0"><div style="position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--hair);background:#000"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${esc(ttl)}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption class="figure-cap"${cap.attr}>${cap.v}</figcaption></figure>`;
+  const ytFig = (id, ttl, cap) => `<figure class="reveal" style="margin:0"><div style="position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--hair);background:#000"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="${esc(ttl)}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption class="figure-cap"${cap.attr}>${cap.v}</figcaption></figure>`;
   const vidsHtml = ytFig("UNg82yhyloU", "まちひろば", v1Cap) + ytFig("Spp5mOSV4js", "チョッピー", v2Cap);
 
   // cta
@@ -2353,7 +2353,7 @@ function hubBody() {
 }
 
 /* ---- page wrapper ---------------------------------------------------- */
-const FONTS ="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Schibsted+Grotesk:wght@400..900&family=Space+Mono:wght@400;700&display=swap";
+const FONTS ="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700;900&family=Space+Mono:wght@400;700&display=swap";
 
 /* GA4 measurement ID — set to "G-XXXXXXXXXX" to enable analytics (empty = off) */
 const GA_ID = "G-S73V4YS9JN";
@@ -2404,7 +2404,7 @@ ${ldHtml}
 <link rel="stylesheet" href="/css/site.css?v=${ASSET_VER}">
 </head>
 <body>
-<div class="app" id="top" data-scheme="light" data-font="zen">
+<div class="app" id="top" data-scheme="light" data-font="mincho">
 ${navHtml}
 <main>
 ${bodyHtml}
